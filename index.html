@@ -68,14 +68,14 @@
       margin: 2rem auto;
       text-align: center;
     }
-    /* .countdown-container {
+    .countdown-container {
       display: flex;
       justify-content: center;
       gap: 1rem;
       background-color: #ffe4ed;
       padding: 1.5rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    } */
+    }
     .time-segment {
       display: flex;
       flex-direction: column;
@@ -198,12 +198,12 @@
       const seconds = Math.floor((diff / 1000) % 60);
 
       document.getElementById('countdown').innerHTML = `
-        // <div class="countdown-container">
+        <div class="countdown-container">
           <div class="time-segment"><div class="number">${days}</div><div class="label">Days</div></div>
           <div class="time-segment"><div class="number">${hours}</div><div class="label">Hours</div></div>
           <div class="time-segment"><div class="number">${minutes}</div><div class="label">Minutes</div></div>
           <div class="time-segment"><div class="number">${seconds}</div><div class="label">Seconds</div></div>
-        // </div>
+        </div>
       `;
     }
     updateCountdown();
@@ -216,7 +216,7 @@
     ];
     const descriptions = [
       "Our first picture together, ever! I wanted to get as close as possible to you.",
-      "This is me on the first day of our internship. Reminder since you probably forgot what I wore that day :("
+      "This is me on the first day of our internship. You can really see how horrendous my hair was here."
     ];
     let current = 0;
 
