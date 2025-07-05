@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our One Year Anniversary</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff0f6;
+      color: #5a2a27;
+      margin: 0;
+      padding: 1rem;
+    }
+    h1 {
+      text-align: center;
+      color: #a8324a;
+    }
+    .timeline {
+      max-width: 600px;
+      margin: 2rem auto;
+      border-left: 4px solid #a8324a;
+      padding-left: 1rem;
+    }
+    .event {
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+    .event h3 {
+      margin: 0;
+      color: #a8324a;
+    }
+    .event time {
+      font-size: 0.9rem;
+      color: #7a4542;
+    }
+    .details {
+      margin-top: 0.5rem;
+      display: none;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    .event.open .details {
+      display: block;
+    }
+    .message {
+      max-width: 600px;
+      margin: 3rem auto;
+      background: #f4c2c2;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      font-style: italic;
+      color: #622626;
+      text-align: center;
+    }
+    /* New styles for countdown, love note, slideshow */
+    #countdown {
+      max-width: 600px;
+      margin: 2rem auto;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #a8324a;
+      text-align: center;
+    }
+    #slideshowSection {
+      max-width: 600px;
+      margin: 3rem auto 5rem;
+      text-align: center;
+    }
+    #slideshow {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #a8324a;
+    }
+    #slideshowSection button {
+      margin-top: 1rem;
+      background-color: #a8324a;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our One Year Anniversary Timeline</h1>
+
+  <!-- Countdown Timer -->
+  <div id="countdown">Loading countdown...</div>
+  
+  <!-- Timeline -->
+  <div class="timeline">
+    <div class="event" onclick="toggleDetails(this)">
+      <h3>The Day It All Began</h3>
+      <time>May 13, 2024</time>
+      <div class="details">This was the day I first laid my eyes upon you. I was anxious this day because I hate first days. This was the first day of my first ever internship! There I was, waiting in Zach A, when the sexiest man in the world wakled in. In a white, long-sleeved, collared shirt and black pants, I instantly fell in love with you. You were soooooo handsome, and I was so sad whenever you got seated on the opposite end of the table. But then, by fate, you were in my group! You were even more handsome up close! And your voice was so manly and confident. I wanted to make you my boyfriend at that instant.</div>
+    </div>
+    <div class="event" onclick="toggleDetails(this)">
+      <h3>Trip to the Beach</h3>
+      <time>September 12, 2024</time>
+      <div class="details">Spent a sunny day together walking along the shore and laughing endlessly.</div>
+    </div>
+    <div class="event" onclick="toggleDetails(this)">
+      <h3>Celebrated Holidays</h3>
+      <time>December 25, 2024</time>
+      <div class="details">Our first Christmas together with warm fires and cozy blankets.</div>
+    </div>
+    <div class="event" onclick="toggleDetails(this)">
+      <h3>One Year Anniversary</h3>
+      <time>August 3, 2025</time>
+      <div class="details">Looking forward to many more years of love and happiness with you.</div>
+    </div>
+  </div>
+
+  <div class="message">
+    ❤️ Thank you for an amazing year, my love. Here's to us! ❤️
+  </div>
+
+  <!-- Photo Slideshow -->
+  <div id="slideshowSection">
+    <img id="slideshow" src="" alt="Anniversary Photos" />
+    <br />
+    <button onclick="previousImage()">←</button>
+    <button onclick="nextImage()">→</button>
+  </div>
+
+  <script>
+    // Toggle timeline event details
+    function toggleDetails(eventElem) {
+      eventElem.classList.toggle('open');
+    }
+
+    // Countdown Timer
+    function updateCountdown() {
+      const anniversary = new Date('2025-08-02T00:00:00');
+      const now = new Date();
+      const diff = anniversary - now;
+
+      if (diff <= 0) {
+        document.getElementById('countdown').innerText = "Happy Anniversary! 🎉";
+        clearInterval(timer);
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('countdown').innerText = 
+        `Countdown to Anniversary: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    updateCountdown();
+    const timer = setInterval(updateCountdown, 1000);
+
+    // Photo Slideshow
+    const photos = [
+      'images/photo1.jpeg',
+      'images/photo2.jpeg',
+      'images/photo3.jpeg',
+      'images/photo4.jpeg',
+      'images/photo5.jpeg',
+      'images/photo6.jpeg',
+      'images/photo7.jpeg',
+      'images/photo8.jpeg',
+      'images/photo9.jpeg',
+      'images/photo10.jpeg',
+      'images/photo11.jpeg',
+      'images/photo12.jpeg',
+      'images/photo13.jpeg',
+      'images/photo14.jpeg',
+      'images/photo15.jpeg',
+      'images/photo16.jpeg',
+      'images/photo17.jpeg',
+      'images/photo18.jpeg',
+      'images/photo19.jpeg',
+      'images/photo20.jpeg',
+      'images/photo21.jpeg',
+      'images/photo22.jpeg',
+      'images/photo23.jpeg'
+    ];
+    let current = 0;
+
+    function nextImage() {
+      current = (current + 1) % photos.length;
+      document.getElementById('slideshow').src = photos[current];
+    }
+
+    function previousImage() {
+      current = (current - 1 + photos.length) % photos.length;
+      document.getElementById('slideshow').src = photos[current];
+    }
+
+    document.getElementById('slideshow').src = photos[current];
+  </script>
+</body>
+</html>
