@@ -66,15 +66,37 @@
     #countdown {
       max-width: 600px;
       margin: 2rem auto;
-      font-weight: bold;
-      font-size: 2rem;
-      color: #a8324a;
       text-align: center;
+    }
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
       background-color: #ffe4ed;
+      padding: 1.5rem;
       border: 3px dashed #a8324a;
-      padding: 1rem;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .time-segment {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: monospace;
+    }
+    .number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: #a8324a;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      min-width: 60px;
+    }
+    .label {
+      margin-top: 0.3rem;
+      font-size: 1rem;
+      color: #a8324a;
     }
     #slideshowSection {
       max-width: 600px;
@@ -174,8 +196,14 @@
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
 
-      document.getElementById('countdown').innerText = 
-        `Countdown to Anniversary: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      document.getElementById('countdown').innerHTML = `
+        <div class="countdown-container">
+          <div class="time-segment"><div class="number">${days}</div><div class="label">Days</div></div>
+          <div class="time-segment"><div class="number">${hours}</div><div class="label">Hours</div></div>
+          <div class="time-segment"><div class="number">${minutes}</div><div class="label">Minutes</div></div>
+          <div class="time-segment"><div class="number">${seconds}</div><div class="label">Seconds</div></div>
+        </div>
+      `;
     }
     updateCountdown();
     const timer = setInterval(updateCountdown, 1000);
