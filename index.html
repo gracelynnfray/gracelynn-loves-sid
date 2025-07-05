@@ -68,14 +68,14 @@
       margin: 2rem auto;
       text-align: center;
     }
-    .countdown-container {
+    /* .countdown-container {
       display: flex;
       justify-content: center;
       gap: 1rem;
       background-color: #ffe4ed;
       padding: 1.5rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+    } */
     .time-segment {
       display: flex;
       flex-direction: column;
@@ -130,9 +130,7 @@
   <div class="intro">
     <p>Hi, my beautiful boyfriend! Welcome to this special site I made just for you. If you're not Sid, leave. This is private information!</p>
 
-    <p>Isn't this website beautiful? I went down a rabbit hole learning everything I could about OCI and actually created this website on an instance there. But then I remembered you could make websites on GitHub, so here I am.</p>
-
-    <p>Our one year anniversary is sooo close. So fast! As it approaches, I’ll be updating this timeline with pivotal moments in our relationship. Each event will have a full description, written by me. Tap the event to read the story, and scroll through the slideshow to see pictures up to the most recent event. I'll be updating this page, so you better visit it again. Every detail is 100% accurate because I’m always right.</p>
+    <p>Our one year anniversary is sooo close. So fast! As it approaches, I’ll be updating this timeline with pivotal moments in our relationship. Each moment will have a full description, written by me. Tap the event to read the story, and scroll through the slideshow to see pictures up to the most recent event. I'll be updating this page, so you better visit it again. Every detail is 100% accurate because I’m always right.</p>
   </div>
 
   <!-- Timeline -->
@@ -141,13 +139,13 @@
       <h3>The Day It All Began</h3>
       <time>May 13, 2024</time>
       <div class="details">
-        On this day, I laid my eyes upon you for the first time ever. To set the scene, I woke up very early on this day since I was extremely anxious about our first day at Visa. This was my first internship ever! Sid, on the other hand, was probably so cool and not even a little worried about today. I could barely sleep, and I woke up early to try to make my hair pretty. I had convinced myself I had wavy hair, and the previous night, I bought mousse and gel that was recommended to me on TikTok. I thought I could give myself wavy hair for the first day. Dumb decision. My hair looked sooo ugly the first day, so I was in a bad mood when I walked into Zach A.
-        <br>
+        On this day, I laid my eyes upon Siddharthan Prakash for the first time ever. To set the scene, I woke up very early on this day since I was extremely anxious about my first day at Visa. It was the first day of my first internship ever! Sid, on the other hand, was probably so cool and not even a little worried about today. He was a returning intern, you see, so he was already much cooler and better than me. I could barely sleep, and I woke up early to try to make my hair pretty. I had convinced myself I had wavy hair, and the previous night, I bought mousse and gel that was recommended to me on TikTok. I thought I could give myself wavy hair for the first day. Dumb decision. My hair looked sooo ugly the first day, so I was in a bad mood when I walked into Zach A.
+        <br><br>
         I get to Zach A a little early, and I am just sitting there, anxious but minding my own business. And then, the sexiest man in the world walked in. In a white, long-sleeved, collared shirt, Siddharthan Prakash, my future lover, swaggered into the room. Of course he did not notice me, as I am not a sight to behold, but I instantly fell in love with him. He was the most handsome man I had ever seen, and my heart dropped when I saw that he got seated on the opposite end of the table. I was sad, as I knew he would never be mine.
         <br>
         This was the day I first laid my eyes upon you. I was anxious this day because I hate first days. This was the first day of my first ever internship! There I was, waiting in Zach A, when the sexiest man in the world wakled in. In a white, long-sleeved, collared shirt and black pants, I instantly fell in love with you. You were soooooo handsome, and I was so sad whenever you got seated on the opposite end of the table. But then, by fate, you were in my group! You were even more handsome up close! And your voice was so manly and confident. I wanted to make you my boyfriend at that instant. But you did not seem interested in me. I was trying to be all smiley anad nice to you. You gave me mean, nonchalant tone of voice and just wanted to talk to Arkady and Ayush, who were also in our group. Sad.</div>
     </div>
-    <div class="event" onclick="toggleDetails(this)">
+    <!-- <div class="event" onclick="toggleDetails(this)">
       <h3>Our First Hangout</h3>
       <time>May 17, 2024</time>
       <div class="details">This was the first time we had ever seen each other outside of work. It was a Friday, and I was sad because I knew I would be alone all weekend, with no friends to talk to. Me, you, and Justin were sitting together at lunch. I was staring longingly at you while you chatted it up with Justin since Justin is the only person you care to talk to. You never cared about my presence. You suggested hanging out that night, and I could tell you just wanted to hangout with Justin, but I said I was down, and you had no choice but to invite me too. Everyone met up at Tumble. When I got there, I was so sad to see you not even care about my arrival. And we did not get to sit next to each other, since you only cared about your other friends there. Sad. We ended up at Ayush's, and I became more confident after drinking. This is when I start making my moves. I realized I was in love with you, but you did not seem to even realize I was there. I tried to talk to you. Boom, rejected. This was so sad. I almost gave up for the night, but I guess your legs got tired and decided they needed to sit down next to me on the couch. I know you only sat down to rest your legs, but the delulu part of me wanted this to be you flirting with me!! So that is how I interpreted it, and my feelings for you exploded! I was like "OMG HE LOVES ME!". I realize now that you did not,  but my delulu, obsessed self pretended you were :D and I was so so so so happy that weekend. Until you did not even text me all weekend >:( I was so sad again.</div>
@@ -156,7 +154,7 @@
       <h3>"Hey"</h3>
       <time>May 21, 2024</time>
     <div class="details">After being so depressed and suicidal from receiving no text from Sid the whole weekend after our first hangout, my spirits lifted on this day. SID TEXTED ME FOR THE FIRST TIME EVER! And he said... "Hey" What the heck??? What is the nonchalance. I realize now that he was not texting me with secret intentions, but the delulu part of me wanted him to be. I responded instantly with a cute "Hii" hoping that he would fall in love with me. Spoiler alert: he did not. He just wanted to know what happened to my eye. Then he ended the conversation and did not speak to me for ages :( Sad. But, this small text was enough to keep my delulu brain alive.</div>
-    </div>
+    </div> -->
   </div>
 
   <div class="message">
@@ -200,12 +198,12 @@
       const seconds = Math.floor((diff / 1000) % 60);
 
       document.getElementById('countdown').innerHTML = `
-        <div class="countdown-container">
+        // <div class="countdown-container">
           <div class="time-segment"><div class="number">${days}</div><div class="label">Days</div></div>
           <div class="time-segment"><div class="number">${hours}</div><div class="label">Hours</div></div>
           <div class="time-segment"><div class="number">${minutes}</div><div class="label">Minutes</div></div>
           <div class="time-segment"><div class="number">${seconds}</div><div class="label">Seconds</div></div>
-        </div>
+        // </div>
       `;
     }
     updateCountdown();
