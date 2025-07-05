@@ -103,11 +103,11 @@
   
   <!-- Intro Paragraph -->
   <div class="intro">
-<p>Hi, my beautiful boyfriend! Welcome to this beautiful site I made for you! If you are not Sid, leave. This is private information.</p>
+    <p>Hi, my beautiful boyfriend! Welcome to this beautiful site I made for you! If you are not Sid, leave. This is private information.</p>
 
-<p>Isn't this website beautiful? I went down a rabbit hole trying to learn everything I could about OCI, and I actually first made this website on an instance I created on OCI. But then I got curious and remembered that you could make a website on GitHub, so here I am now.</p>
+    <p>Isn't this website beautiful? I went down a rabbit hole trying to learn everything I could about OCI, and I actually first made this website on an instance I created on OCI. But then I got curious and remembered that you could make a website on GitHub, so here I am now.</p>
 
-<p>I am so excited that we're so close to our one-year anniversary. It flew by so quickly. Enjoy this special timeline I made, where I recount our significant moments. Click each event to see the details. Each of these details is 100% accurate, as I am always correct.</p>
+    <p>I am so excited that we're so close to our one-year anniversary. It flew by so quickly. As our first anniversary approaches, I will be updating this special timeline, where I recount our significant moments. Click each event to see the details. Each of these details is 100% accurate, as I am always correct. Visit this page often to see my new updates, and some events even come with a new photo in the slideshow!</p>
   </div>
 
   <!-- Timeline -->
@@ -127,11 +127,6 @@
       <time>May 21, 2024</time>
     <div class="details">After being so depressed and suicidal from receiving no text from Sid the whole weekend after our first hangout, my spirits lifted on this day. SID TEXTED ME FOR THE FIRST TIME EVER! And he said... "Hey" What the heck??? What is the nonchalance. I realize now that he was not texting me with secret intentions, but the delulu part of me wanted him to be. I responded instantly with a cute "Hii" hoping that he would fall in love with me. Spoiler alert: he did not. He just wanted to know what happened to my eye. Then he ended the conversation and did not speak to me for ages :( Sad. But, this small text was enough to keep my delulu brain alive.</div>
     </div>
-    <div class="event" onclick="toggleDetails(this)">
-      <h3>One Year Anniversary</h3>
-      <time>August 3, 2025</time>
-      <div class="details">Looking forward to many more years of love and happiness with you.</div>
-    </div>
   </div>
 
   <div class="message">
@@ -141,6 +136,7 @@
   <!-- Photo Slideshow -->
   <div id="slideshowSection">
     <img id="slideshow" src="" alt="Anniversary Photos" />
+    <p id="photoDescription"></p>
     <br />
     <button onclick="previousImage()">←</button>
     <button onclick="nextImage()">→</button>
@@ -179,41 +175,29 @@
     const photos = [
       'images/photo1.jpeg',
       'images/photo2.jpeg',
-      'images/photo3.jpeg',
-      'images/photo4.jpeg',
-      'images/photo5.jpeg',
-      'images/photo6.jpeg',
-      'images/photo7.jpeg',
-      'images/photo8.jpeg',
-      'images/photo9.jpeg',
-      'images/photo10.jpeg',
-      'images/photo11.jpeg',
-      'images/photo12.jpeg',
-      'images/photo13.jpeg',
-      'images/photo14.jpeg',
-      'images/photo15.jpeg',
-      'images/photo16.jpeg',
-      'images/photo17.jpeg',
-      'images/photo18.jpeg',
-      'images/photo19.jpeg',
-      'images/photo20.jpeg',
-      'images/photo21.jpeg',
-      'images/photo22.jpeg',
-      'images/photo23.jpeg'
+    ];
+    const descriptions = [
+      "Our first picture together, ever!",
+      "This is me on the first day of our internship. Reminder since you probably forgot what I wore that day :("
     ];
     let current = 0;
 
+    function updateSlideshow() {
+      document.getElementById('slideshow').src = photos[current];
+      document.getElementById('photoDescription').innerText = descriptions[current];
+    }
+
     function nextImage() {
       current = (current + 1) % photos.length;
-      document.getElementById('slideshow').src = photos[current];
+      updateSlideshow();
     }
 
     function previousImage() {
       current = (current - 1 + photos.length) % photos.length;
-      document.getElementById('slideshow').src = photos[current];
+      updateSlideshow();
     }
 
-    document.getElementById('slideshow').src = photos[current];
+    updateSlideshow();
   </script>
 </body>
 </html>
